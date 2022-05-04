@@ -20,7 +20,7 @@ const Home = () => {
 
   const refreshPage = () => {
     setIsLoading(true);
-      Axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=Israel`).then((response) => {
+      Axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=${All}`).then((response) => {
           console.log(response.All);
           setIsLoading(false);
           setCountry(response.All);
@@ -43,7 +43,7 @@ const Home = () => {
 
 
 
-        <div className="covidInfo">
+        <div className="covidCountryInfo">
 
         </div>
 
